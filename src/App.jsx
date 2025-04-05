@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-export default function App() {
+const App = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -58,4 +58,6 @@ export default function App() {
       </div>
     </div>
   );
-}
+};
+
+export default App;
