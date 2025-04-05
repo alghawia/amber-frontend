@@ -13,11 +13,11 @@ export default function App() {
     setInput("");
     setLoading(true);
 
-    const response = await fetch("https://amber-plugin-safe.onrender.com/api/amber", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message: input })
-    });
+  const response = await fetch("http://127.0.0.1:3000/api/amber", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message: input })
+  });
 
     const data = await response.json();
     const amberReply = { role: "amber", content: data.reply };
