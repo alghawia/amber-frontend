@@ -13,7 +13,7 @@ export default function App() {
     setInput("");
     setLoading(true);
 
-  const response = await fetch("http://127.0.0.1:3010/api/amber", {
+  const response = await fetch("https://amber-api-server.onrender.com/api/amber", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ message: input })
