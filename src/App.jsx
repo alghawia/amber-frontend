@@ -1,1 +1,1 @@
-// Placeholder for App.jsx
+export default function App() { ... }
