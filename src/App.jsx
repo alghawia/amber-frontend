@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-const App = () => {
+export default function App() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -8,7 +8,6 @@ const App = () => {
 
   const sendMessage = async () => {
     if (!input.trim()) return;
-
     const userMessage = { role: "user", content: input };
     setMessages((prev) => [...prev, userMessage]);
     setInput("");
@@ -59,6 +58,4 @@ const App = () => {
       </div>
     </div>
   );
-};
-
-export default App;
+}
