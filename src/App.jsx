@@ -15,7 +15,7 @@ export function App() {
     setLoading(true);
 
     try {
-      const response = await fetch("https://amber-api-server.onrender.com/api/amber", {
+      const response = await fetch("https://amber-api-server.onrender.com/api/amber", { // final push: vercel live sync
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: input }),
