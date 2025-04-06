@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 // Force redeploy
-export function App() {
+
+export default function App() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -15,7 +16,7 @@ export function App() {
     setLoading(true);
 
     try {
-      const response = await fetch("https://amber-api-server.onrender.com/api/amber", { // final push: vercel live sync
+      const response = await fetch("https://amber-api-server.onrender.com/api/amber", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: input }),
